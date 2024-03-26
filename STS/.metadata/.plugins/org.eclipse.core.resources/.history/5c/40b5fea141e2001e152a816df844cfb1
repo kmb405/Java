@@ -1,0 +1,36 @@
+package com.coding_dojo.burger.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.coding_dojo.burger.models.Burger;
+import com.coding_dojo.burger.services.BurgerService;
+
+import jakarta.validation.Valid;
+
+//... imports removed for brevity
+@Controller
+public class BurgerController {
+	private final BurgerService burgerService;
+	 
+	public BurgerController(BurgerService burgerService) {
+		this.burgerService = burgerService;
+	}
+ 
+	@GetMapping("/")
+	public String index(@ModelAttribute("burger") Burger burger) {
+		return "index.jsp";
+	}
+	
+	@PostMapping("/create")
+	public String create(@Valid @ModelAttribute("burger") Burger burger, BindingResult result) {
+		if (result.hasErrors()) {
+			return "index.jsp";
+		}
+		burgerService.createBurger(burger);
+	}
+}
+

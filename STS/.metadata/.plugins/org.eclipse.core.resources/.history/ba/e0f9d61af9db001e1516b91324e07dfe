@@ -1,0 +1,18 @@
+package com.coding_dojo.displaydate.controllers;
+
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class MainController {
+	// class definition and imports here...
+    @RequestMapping("")
+    public String index(Model model) {
+    
+    	// Your code here! Add values to the view model to be rendered
+    
+        return "index.jsp";
+    }
+    //...
+    
+
+}

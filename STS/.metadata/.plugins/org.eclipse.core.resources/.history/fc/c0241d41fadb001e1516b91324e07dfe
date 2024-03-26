@@ -1,0 +1,38 @@
+package com.coding_dojo.displaydate.controllers;
+
+import org.springframework.stereotype.Controller;
+import java.util.Date;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class MainController {
+	// class definition and imports here...
+    @RequestMapping("/")
+    public String index() {
+    
+    	// Your code here! Add values to the view model to be rendered
+    	Date date = new Date();
+    
+        return "index.jsp";
+    }
+    
+    @RequestMapping("/date")
+    public String date() {
+        
+    	// Your code here! Add values to the view model to be rendered
+    
+        return "date.jsp";
+    }
+    
+    @RequestMapping("/time")
+    public String time() {
+        
+    	// Your code here! Add values to the view model to be rendered
+    
+        return "time.jsp";
+    }
+    //...
+    
+
+}

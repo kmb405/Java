@@ -1,0 +1,15 @@
+INDEX VERSION 1.4+C:\Users\c_matbal\Desktop\Coding Dojo\Java\STS\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1009632573.index
+1526673424.index
+89461710.index
+2427630260.index
+2286740993.index
+2380175872.index
+947247484.index
+1384510677.index
+1471715625.index
+2891669877.index
+890392135.index
+791909585.index
+1616885354.index
+775658243.index

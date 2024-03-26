@@ -1,0 +1,28 @@
+package com.coding_dojo.burger.controllers;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.coding_dojo.burger.models.Burger;
+import com.coding_dojo.burger.services.BurgerService;
+
+//... imports removed for brevity
+@Controller
+public class BurgerController {
+	private final BurgerService burgerService;
+	 
+	public BurgerController(BurgerService burgerService) {
+		this.burgerService = burgerService;
+	}
+ 
+	@GetMapping("/")
+	public String index(Model model) {
+		List<Burger> burgers = burgerService.allBurgers();
+		model.addAttribute("burgers", burgers);
+		return "index.jsp";
+	}
+}
+

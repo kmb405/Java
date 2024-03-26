@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+.container {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px
+}
+
+a {
+	color: aqua;
+	padding: 30px
+}
+
+
+p {
+    color: blue;
+}

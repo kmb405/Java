@@ -1,0 +1,41 @@
+package com.coding_dojo.burger.models;
+
+import java.util.Date;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import org.springframework.format.annotation.DateTimeFormat;
+
+@Entity
+@Table(name="burgers")
+public class Burger {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@NotNull
+    @Size(min = 5, max = 200)
+    private String title;
+    @NotNull
+    @Size(min = 5, max = 200)
+    private String description;
+    @NotNull
+    @Size(min = 3, max = 40)
+    private String language;
+    @NotNull
+    @Min(100)
+    private Integer numberOfPages;
+    
+    @Column(updatable=false)
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private Date createdAt;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private Date updatedAt;
+}

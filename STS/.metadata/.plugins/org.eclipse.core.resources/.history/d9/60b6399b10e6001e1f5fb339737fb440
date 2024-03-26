@@ -1,0 +1,5 @@
+package com.coding_dojo.dojoninja.repositories;
+
+public class DojoRepository {
+
+}

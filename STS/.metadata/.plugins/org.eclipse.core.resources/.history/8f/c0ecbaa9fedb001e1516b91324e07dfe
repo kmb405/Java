@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+a {
+	color: lightblue;
+}
+
+
+p {
+    color: blue;
+}
