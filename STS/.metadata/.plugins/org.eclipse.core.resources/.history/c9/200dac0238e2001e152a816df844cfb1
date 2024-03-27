@@ -1,0 +1,9 @@
+package com.coding_dojo.burger.models;
+
+
+
+@Entity
+@Table(name="burgers")
+public class Burgers {
+	
+}

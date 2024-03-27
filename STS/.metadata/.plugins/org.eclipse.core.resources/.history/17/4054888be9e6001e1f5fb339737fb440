@@ -1,0 +1,5 @@
+package com.coding_dojo.student_roster.models;
+
+public class Dorm {
+
+}

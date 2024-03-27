@@ -1,0 +1,35 @@
+package com.coding_dojo.burger.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.coding_dojo.burger.models.Burger;
+import com.coding_dojo.burger.repositories.BurgerRepository;
+
+@Service
+public class BurgerService {
+	private final BurgerRepository burgerRepository;
+	
+	public BurgerService(BurgerRepository burgerRepository) {
+		this.burgerRepository = burgerRepository;
+	}
+	// returns all burgers
+	public List<Burger> allBurgers() {
+        return burgerRepository.findAll();
+    }
+    // creates a burgers
+    public Burger createBook(Burger b) {
+        return burgerRepository.save(b);
+    }
+    // retrieves a burgers
+    public Burger findBook(Long id) {
+        Optional<Burger> optionalBook = burgerRepository.findById(id);
+        if(optionalBook.isPresent()) {
+            return optionalBook.get();
+        } else {
+            return null;
+        }
+    }
+}

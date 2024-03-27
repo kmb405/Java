@@ -1,0 +1,17 @@
+package com.coding_dojo.student_roster.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.coding_dojo.student_roster.services.DormServ;
+import com.coding_dojo.student_roster.services.StudentServ;
+
+@Controller
+public class DormController {
+	
+	@Autowired
+	private DormServ dormServ;
+	
+	@Autowired
+	private StudentServ studentServ;
+}

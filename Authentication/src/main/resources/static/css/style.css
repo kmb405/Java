@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "ISO-8859-1";
 
 .bg-light-blue {
@@ -6,4 +7,14 @@
 
 .bg-light-red  {
 	background-color: lightcoral;
+=======
+@charset "ISO-8859-1";
+
+.bg-light-blue {
+	background-color: lightblue;
+}
+
+.bg-light-red  {
+	background-color: lightcoral;
+>>>>>>> 38f25c936d9d8c892c5f21a1b49cef51149babe4
 }

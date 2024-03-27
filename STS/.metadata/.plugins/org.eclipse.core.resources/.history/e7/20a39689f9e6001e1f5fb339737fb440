@@ -1,0 +1,69 @@
+package com.coding_dojo.student_roster.models;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import com.coding_dojo.student_roster.services.DormServ;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="dorms")
+public class Dorm {
+	
+	@Autowired
+	DormServ dormServ;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private String name;
+	
+	@OneToMany(mappedBy="dorm", fetch=FetchType.LAZY)
+	private List<Student> students;
+	
+	public Dorm() {
+		
+	}
+
+	public DormServ getDormServ() {
+		return dormServ;
+	}
+
+	public void setDormServ(DormServ dormServ) {
+		this.dormServ = dormServ;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
+	
+	
+}

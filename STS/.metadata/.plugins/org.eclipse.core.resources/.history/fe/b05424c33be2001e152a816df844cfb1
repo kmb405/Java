@@ -1,0 +1,5 @@
+package com.coding_dojo.burger.controllers;
+
+public class BurgerController {
+	
+}

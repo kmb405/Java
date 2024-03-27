@@ -1,0 +1,5 @@
+package com.coding_dojo.dojoninja.models;
+
+public class Ninja {
+
+}

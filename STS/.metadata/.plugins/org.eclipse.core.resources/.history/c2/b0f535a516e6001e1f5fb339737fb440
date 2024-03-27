@@ -1,0 +1,10 @@
+package com.coding_dojo.dojoninja.repositories;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+
+public interface DojoRepository extends CrudRepository {
+	List<Dojo> findAll();
+}

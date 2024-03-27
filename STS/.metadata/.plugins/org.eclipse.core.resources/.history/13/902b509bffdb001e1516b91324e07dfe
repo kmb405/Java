@@ -1,0 +1,20 @@
+@charset "ISO-8859-1";
+.container {
+	display: flex;
+	justify-content: center;
+	margin-top: 100px
+}
+
+a {
+	color: blue;
+	padding: 30px;
+	font-family: sans-serif;
+    font-size: 30px;
+}
+
+
+p {
+    color: lightblue;
+    font-family: sans-serif;
+    font-size: 30px;
+}

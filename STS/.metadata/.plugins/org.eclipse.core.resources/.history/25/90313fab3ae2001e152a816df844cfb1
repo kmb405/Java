@@ -1,0 +1,8 @@
+package com.coding_dojo.burger.repositories;
+
+import org.springframework.data.repository.CrudRepository;
+
+@Repository
+public interface BurgerRepository extends CrudRepository<Burger, Long> {
+	
+}

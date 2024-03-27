@@ -1,0 +1,5 @@
+package com.coding_dojo.burger.interfaces;
+
+public interface BurgerInterface {
+
+}

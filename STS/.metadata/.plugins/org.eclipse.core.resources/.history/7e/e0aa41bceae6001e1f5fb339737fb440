@@ -1,0 +1,29 @@
+package com.coding_dojo.student_roster.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.coding_dojo.student_roster.models.Dorm;
+import com.coding_dojo.student_roster.services.DormServ;
+import com.coding_dojo.student_roster.services.StudentServ;
+
+@Controller
+public class DormController {
+	
+	@Autowired
+	private DormServ dormServ;
+	
+	@Autowired
+	private StudentServ studentServ;
+	
+	@GetMapping("/")
+	public String dorms(Model model) {
+		List<Dorm> dorms = dormServ.allDorms();
+		model.addAttribute("dorms", dorms);
+		return "dorms.jsp";
+	}
+}
